@@ -14,9 +14,10 @@
         <p>Please, select the courses you want to drop.</p>
       </div>
         <div class="course_drop_form">
-          <form>
+          <form method="POST">
+            {% csrf_token %}
             <div class="inputBox">
-              <input type="text" name="" required="required">
+              <input type="text" name="courseID" required="required">
               <span>Course ID</span>
             </div>
             <div class="inputBox">
